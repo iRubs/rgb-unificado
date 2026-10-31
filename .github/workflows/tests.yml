@@ -1,0 +1,21 @@
+name: Python tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch this exact commit
+        env:
+          REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}.git
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin "$REPOSITORY_URL"
+          git fetch --depth 1 origin "$COMMIT_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Test without hardware or elevated permissions
+        run: python3 -m unittest discover -s tests -v
+      - name: Compile Python files
+        run: python3 -m compileall -q rgb_unificado install.py rgb-control.py tools
