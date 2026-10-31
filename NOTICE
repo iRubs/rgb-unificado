@@ -1,0 +1,19 @@
+RGB unificado
+Copyright (C) 2026 RGB unificado contributors
+Licensed under GPL-3.0-or-later. See LICENSE.
+
+OpenRGB is an independent project, GPL-2.0-or-later.
+The included catalogue contains public registration metadata extracted from
+OpenRGB release_1.1 (commit recorded in data/openrgb-1.1.json).
+https://github.com/CalcProgrammer1/OpenRGB/tree/release_1.1
+https://openrgb.org/
+The OpenRGB executable is not included in this repository.
+
+The Redragon lighting adapter was implemented from observed replies on the
+documented K686RGB-M model/firmware and the FF1B protocol documentation in
+Omakboard (MIT OR Apache-2.0):
+https://github.com/elberacasa/omakboard/blob/a2f2a23107797f2f68543704abc8fea75a5478b6/notes/protocol-aula-ff1b.md
+Copyright and licensing of upstream projects remain with their authors.
+
+No affiliation with or endorsement by OpenRGB, Redragon, ASRock, Corsair,
+Logitech or any other hardware manufacturer is implied.
